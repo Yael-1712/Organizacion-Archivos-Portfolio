@@ -1,3 +1,3 @@
 # proyecto 3
-## 📄 Documentación Técnica
-* **[Descargar Informe de Ingeniería (PDF)](./Reporteevaluacion3.pdf)**
+## 📄 Documentación Oficial
+* **[Descargar Informe Técnico de Ingeniería (PDF)](./Reporte%20evaluacion%203.pdf)**
