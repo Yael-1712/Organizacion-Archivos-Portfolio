@@ -1,3 +1,2 @@
 # proyecto 4
-## 📄 Documentación Oficial
-* **[Descargar Informe Técnico de Ingeniería (PDF)](./Informe%20de%20evaluación%204.pdf)**
+* [Descargar Informe Técnico de Ingeniería (PDF)](./Informe_de_evaluacion_4.pdf)
