@@ -2,7 +2,7 @@
 
 ---
 
-## 📌 Contextualización y Propósito del Sistema
+##  Contextualización y Propósito del Sistema
 
 Este módulo es una solución de software diseñada para regular, gestionar y auditar el control de usuarios. El sistema se compone de un componente analítico local desarrollado en Python que procesa la lógica de control interna, interactuando de manera directa con una interfaz web de supervisión y gestión desarrollada en PHP, HTML5 y CSS3. El sistema intercepta las peticiones de los usuarios, evalúa sus parámetros y permite visualizar el estado del entorno de manera dinámica.
 
@@ -29,6 +29,6 @@ La estructura interna del proyecto centraliza sus componentes en la raíz del di
 
 ---
 
-## 🔒 Buenas Prácticas y Flexibilidad del Desarrollo
+##  Buenas Prácticas y Flexibilidad del Desarrollo
 
 Para asegurar el cumplimiento de los estándares de ingeniería de software y garantizar la escalabilidad, el sistema implementa un desacoplamiento estricto. No existen identificadores, nombres ni parámetros de usuarios quemados (*hardcoded*) dentro del código fuente de `control.py` o `index.php`. Toda validación de identidad e información de entrada se resuelve dinámicamente consultando el archivo de configuración externo `usuarios.json`, permitiendo altas, bajas o modificaciones de personal de forma externa sin alterar la lógica de programación base.
