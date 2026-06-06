@@ -2,13 +2,13 @@
 
 ---
 
-## 📌 Contextualización y Propósito del Sistema
+##  Contextualización y Propósito del Sistema
 
 Este módulo representa una solución de software orientada a la recolección estandarizada, procesamiento lógico y segmentación de datos de entrada. El sistema integra una interfaz web frontend desarrollada en HTML5 y CSS3 para la captura de parámetros, la cual interactúa con un backend dinámico en PHP encargado del procesamiento inmediato de las solicitudes. Adicionalmente, se acopla un componente analítico programado en Python para la manipulación avanzada y generación de reportes basados en la información recolectada, consolidando un flujo de trabajo íntegro y automatizado.
 
 ---
 
-## 📁 Distribución del Código Fuente y Componentes
+##  Distribución del Código Fuente y Componentes
 
 La arquitectura interna del proyecto se distribuye de manera modular dentro del directorio principal, asignando responsabilidades específicas a cada uno de sus elementos:
 
@@ -22,7 +22,7 @@ La arquitectura interna del proyecto se distribuye de manera modular dentro del 
 
 ---
 
-## 🛠️ Fundamentación Técnica de Almacenamiento y Canales de Datos
+##  Fundamentación Técnica de Almacenamiento y Canales de Datos
 
 ### Gestión de Información en Estructuras Secuenciales (`maestro.txt` y `filtrado.txt`)
 
@@ -33,6 +33,6 @@ La arquitectura interna del proyecto se distribuye de manera modular dentro del 
 
 ---
 
-## 🔒 Buenas Prácticas y Flexibilidad del Desarrollo
+##  Buenas Prácticas y Flexibilidad del Desarrollo
 
 Con el fin de asegurar el aislamiento de responsabilidades y la modularidad del software, el sistema divide rígidamente la adquisición de datos de su almacenamiento y procesamiento analítico. La lógica de filtrado y generación de reportes se encuentra completamente desacoplada de la interfaz de usuario, garantizando que las reglas de negocio puedan ser modificadas directamente en el script de Python o PHP sin comprometer la integridad del frontend ni la estructura del repositorio de datos maestro.
