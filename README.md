@@ -26,19 +26,19 @@ A continuación se presenta el resumen interactivo de los componentes desarrolla
 
 ##  Especificaciones de Arquitectura por Módulo
 
-### 📂 1. Proyecto-1-NombreProyecto (Sistema de Captura y Filtrado)
+###  1. Proyecto-1-NombreProyecto (Sistema de Captura y Filtrado)
 * **Propósito:** Creación de un ecosistema híbrido para la simulación de inventarios estandarizados (Autos a escala / Hot Wheels).
 * **Flujo Operativo:** Un script analítico en Python (`generacion.py`) modela e inyecta dinámicamente un dataset masivo en `maestro.txt`. El usuario interactúa mediante una interfaz web (`formulario.html`) donde envía palabras clave indexadas hacia `procesar.php`, aislando los resultados en `filtrado.txt` para su posterior renderizado estético en `visualizar.php`.
 
-### 📂 2. Proyecto-2-NombreProyecto (Control de Acceso Maquiladora)
+###  2. Proyecto-2-NombreProyecto (Control de Acceso Maquiladora)
 * **Propósito:** Automatización del control de ingresos de personal de planta y disparo de alertas de seguridad en tiempo real.
 * **Flujo Operativo:** Un controlador backend en Python (`control.py`) emula un lector físico de gafetes interactuando síncronamente en modo lectura con `usuarios.json`. Al detectar credenciales inválidas, gatilla una rutina de alerta inmutable que se anexa a la bitácora, permitiendo al monitor supervisor en PHP (`index.php`) pintar dinámicamente indicadores visuales restrictivos basados en estilos CSS.
 
-### 📂 3. Proyecto-3-NombreProyecto (BI y Visualización de Ventas)
+###  3. Proyecto-3-NombreProyecto (BI y Visualización de Ventas)
 * **Propósito:** Extracción, procesamiento matemático y análisis gráfico de transacciones financieras en catálogos tecnológicos.
 * **Flujo Operativo:** El motor analítico en Python (`reporte.py`) ejecuta operaciones vectorizadas sobre el archivo estructurado `ventas_tecnologia.csv`. Utiliza funciones de agregación matricial para clasificar comportamientos cronológicos estacionales y renderiza de manera paralela visualizaciones avanzadas de cuotas de mercado (Gráficos lineales y circulares en `matplotlib`).
 
-### 📂 4. Proyecto-4-NombreProyecto (Procesamiento Masivo Big Data)
+###  4. Proyecto-4-NombreProyecto (Procesamiento Masivo Big Data)
 * **Propósito:** Procesamiento de flujos masivos de datos numéricos y categóricos médicos optimizando los límites de la memoria RAM.
 * **Flujo Operativo:** Diseñado exclusivamente para prescindir de interfaces de usuario y maximizar el rendimiento de la CPU. El script de ingeniería `datos.py` abre un canal de streaming hacia un dataset de gran escala, fragmentándolo en ventanas lógicas estrictas de $100,000$ filas (*chunking*). Calcula de manera síncrona acumuladores globales de extremos térmicos, medias de edad y frecuencias de uso de fármacos, liberando la RAM en cada ciclo antes de serializar el resultado en un JSON balanceado.
 
