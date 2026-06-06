@@ -8,7 +8,7 @@ Este módulo es una solución de software diseñada para regular, gestionar y au
 
 ---
 
-## 📁 Distribución del Código Fuente y Componentes
+##  Distribución del Código Fuente y Componentes
 
 La estructura interna del proyecto centraliza sus componentes en la raíz del directorio principal, distribuyendo las responsabilidades de la siguiente manera:
 
@@ -20,7 +20,7 @@ La estructura interna del proyecto centraliza sus componentes en la raíz del di
 
 ---
 
-## 🛠️ Fundamentación Técnica de Almacenamiento y Canales de Datos
+##  Fundamentación Técnica de Almacenamiento y Canales de Datos
 
 ### Gestión de Información Estructurada (`usuarios.json`)
 
