@@ -8,7 +8,7 @@ Este desarrollo actúa como un motor de Business Intelligence (BI) programado de
 
 ---
 
-## 🗺️ Mapa de Componentes y Flujo de Información (Data Pipeline)
+##  Mapa de Componentes y Flujo de Información (Data Pipeline)
 
 El entorno analítico desacopla la persistencia de datos del núcleo de procesamiento matemático de la siguiente manera:
 
