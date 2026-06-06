@@ -1,34 +1,38 @@
-# Proyecto Corte 2: Sistema de Control y Gestión de Usuarios
+# Proyecto Corte 1: Sistema de Captura, Procesamiento y Filtrado de Información
 
 ---
 
-##  Contextualización y Propósito del Sistema
+## 📌 Contextualización y Propósito del Sistema
 
-Este módulo es una solución de software diseñada para regular, gestionar y auditar el control de usuarios. El sistema se compone de un componente analítico local desarrollado en Python que procesa la lógica de control interna, interactuando de manera directa con una interfaz web de supervisión y gestión desarrollada en PHP, HTML5 y CSS3. El sistema intercepta las peticiones de los usuarios, evalúa sus parámetros y permite visualizar el estado del entorno de manera dinámica.
+Este módulo representa una solución de software orientada a la recolección estandarizada, procesamiento lógico y segmentación de datos de entrada. El sistema integra una interfaz web frontend desarrollada en HTML5 y CSS3 para la captura de parámetros, la cual interactúa con un backend dinámico en PHP encargado del procesamiento inmediato de las solicitudes. Adicionalmente, se acopla un componente analítico programado en Python para la manipulación avanzada y generación de reportes basados en la información recolectada, consolidando un flujo de trabajo íntegro y automatizado.
 
 ---
 
 ## 📁 Distribución del Código Fuente y Componentes
 
-La estructura interna del proyecto centraliza sus componentes en la raíz del directorio principal, distribuyendo las responsabilidades de la siguiente manera:
+La arquitectura interna del proyecto se distribuye de manera modular dentro del directorio principal, asignando responsabilidades específicas a cada uno de sus elementos:
 
-1. **`diagrama de flujo.jpeg`** : Documentación gráfica y mapeo del algoritmo que describe visualmente la lógica, decisiones y el flujo de trabajo del sistema.
-2. **`usuarios.json`** : Base de datos local estructurada en formato plano que almacena las credenciales, registros e información persistente de los usuarios del sistema.
-3. **`style.css`** : Hoja de estilos encargada del diseño responsivo, la distribución tipográfica y la presentación visual de la interfaz de usuario.
-4. **`index.php`** : Monitor e interfaz web principal que renderiza el entorno gráfico del sistema, permitiendo la interacción con los datos en tiempo real.
-5. **`control.py`** : Script y lógica central de procesamiento (Python) encargado de ejecutar las rutinas de control, validación y manipulación de los flujos del sistema.
+1. **`proyecto-corte1/formulario.html`** : Interfaz gráfica inicial que actúa como el punto de captura de datos y envío de parámetros por parte del usuario.
+2. **`proyecto-corte1/estilos.css`** : Capa estática encargada de la maquetación visual, diseño responsivo y la estandarización estética de los formularios y vistas.
+3. **`proyecto-corte1/procesar.php`** : Controlador backend de primera capa encargado de recibir, validar y canalizar la información enviada desde la interfaz web hacia los archivos de persistencia.
+4. **`proyecto-corte1/visualizar.php`** : Módulo web dinámico diseñado para la lectura y renderizado en tiempo real de los datos almacenados de forma estructurada.
+5. **`proyecto-corte1/generacion.py`** : Script analítico en Python diseñado para procesar el conjunto de datos global, ejecutar algoritmos de automatización y generar salidas específicas.
+6. **`proyecto-corte1/maestro.txt`** : Archivo de persistencia plano que actúa como el repositorio centralizado e histórico de todas las entradas del sistema.
+7. **`proyecto-corte1/filtrado.txt`** : Registro de salida secuencial que almacena exclusivamente los datos depurados bajo reglas lógicas específicas de exclusión o segmentación.
 
 ---
 
 ## 🛠️ Fundamentación Técnica de Almacenamiento y Canales de Datos
 
-### Gestión de Información Estructurada (`usuarios.json`)
+### Gestión de Información en Estructuras Secuenciales (`maestro.txt` y `filtrado.txt`)
 
-* **Análisis de Selección:** Se seleccionó el formato JSON (JavaScript Object Notation) para la persistencia de los usuarios autorizados debido a que proporciona una organización jerárquica basada en pares clave-valor. Esto permite almacenar colecciones de datos complejas sin el sobrecosto operativo de un motor de base de datos relacional tradicional, asegurando portabilidad absoluta y una sintaxis estandarizada nativamente legible tanto por el backend en Python como por el frontend en PHP.
-* **Mecanismo de Lectura:** En la lógica de control, los scripts acceden a este flujo de datos optimizando el uso de memoria RAM a través de mapeos directos (como la librería nativa `json`), lo que agiliza los tiempos de búsqueda, lectura y actualización mediante comparaciones lógicas directas.
+* **Análisis de Selección:** Se optó por el uso de archivos de texto plano para el almacenamiento debido a la necesidad de implementar una persistencia ligera, veloz y de baja sobrecarga en los procesos de escritura concurrente. Esta estructura permite un registro lineal idóneo para operaciones de auditoría y almacenamiento masivo rápido sin depender de servicios de bases de datos de terceros.
+* **Mecanismo de Manipulación Híbrida:** 
+  * El entorno PHP interactúa mediante canales de streaming en modos de anexado y lectura lineal continua para registrar y visualizar las entradas sin saturar el servidor.
+  * El motor de Python (`generacion.py`) accede al flujo de datos del archivo maestro para parsear la información, aplicar filtros algorítmicos complejos y volcar las métricas resultantes de forma automatizada dentro del archivo de salida filtrado.
 
 ---
 
-##  Buenas Prácticas y Flexibilidad del Desarrollo
+## 🔒 Buenas Prácticas y Flexibilidad del Desarrollo
 
-Para asegurar el cumplimiento de los estándares de ingeniería de software y garantizar la escalabilidad, el sistema implementa un desacoplamiento estricto. No existen identificadores, nombres ni parámetros de usuarios quemados (*hardcoded*) dentro del código fuente de `control.py` o `index.php`. Toda validación de identidad e información de entrada se resuelve dinámicamente consultando el archivo de configuración externo `usuarios.json`, permitiendo altas, bajas o modificaciones de personal de forma externa sin alterar la lógica de programación base.
+Con el fin de asegurar el aislamiento de responsabilidades y la modularidad del software, el sistema divide rígidamente la adquisición de datos de su almacenamiento y procesamiento analítico. La lógica de filtrado y generación de reportes se encuentra completamente desacoplada de la interfaz de usuario, garantizando que las reglas de negocio puedan ser modificadas directamente en el script de Python o PHP sin comprometer la integridad del frontend ni la estructura del repositorio de datos maestro.
